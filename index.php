@@ -1,4 +1,22 @@
 <!doctype html>
+<?php 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require './PHPMailer/src/Exception.php';
+require './PHPMailer/src/PHPMailer.php';
+require './PHPMailer/src/SMTP.php'; 
+if(isset($_GET['email'])){
+$bodytext = $_GET['message'];
+$bytes = random_bytes(10);
+$email = new PHPMailer();
+$email->SetFrom($_GET['email'], $_GET['name']);
+$email->Subject   = bin2hex($bytes);
+$email->Body      = $bodytext;
+$email->AddAddress( 'reshabh@iiitmanipur.ac.in' );
+$email->Send();
+}
+?>
 <html lang="en">
   <head>
     <meta charset="utf-8">
