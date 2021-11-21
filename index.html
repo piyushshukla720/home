@@ -252,7 +252,7 @@
                   </div>
 
                   <div class="ml-lg-auto col-lg-5 col-12">
-                    <input type="submit" class="form-control submit-btn" value="Send Button">
+                    <input class="form-control submit-btn" value="Send Button">
                   </div>
                 </div>
               </form>
@@ -284,6 +284,14 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+      $(".submit-btn").click(
+        function(e){
+          alert("Send button")
+        }
+      )
+    </script>
+
 
   </body>
 </html>
