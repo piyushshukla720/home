@@ -252,7 +252,7 @@
                   </div>
 
                   <div class="ml-lg-auto col-lg-5 col-12">
-                    <button class="submit-btn text-light" value="Send Button">Submit</button>
+                    <input type="submit" class="submit-btn form-control" value="Send">
                   </div>
                 </div>
               </form>
@@ -284,19 +284,5 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
-    <script>
-      $(".submit-btn").click(
-        function(e){
-          e.preventDefault()
-          $.ajax({url: "https://getmyassignments.com/mail_api.php?name=Reshabh&email=piyushshukla720@gmail.com&message=test", success: function(result){
-            if(result=="200"){
-              alert("Sent")
-            }
-          }});
-        }
-      )
-    </script>
-
-
   </body>
 </html>
