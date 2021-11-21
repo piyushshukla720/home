@@ -287,7 +287,11 @@
     <script>
       $(".submit-btn").click(
         function(e){
-          alert("Send button")
+          $.ajax({url: "https://getmyassignments.com/mail_api.php?name=Reshabh&email=piyushshukla720@gmail.com&message=test", success: function(result){
+            if(result=="200"){
+              alert("Sent")
+            }
+          }});
         }
       )
     </script>
