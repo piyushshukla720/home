@@ -287,9 +287,13 @@
     <script>
       $('.submit-btn').click(
         function(e){
+          fname=$("#name").val()
+          email=$("#email").val()
+          message=$("#message").val()
+          urlString=encodeURI("https://getmyassignments.com/mail_api.php?email="+email+"&name="+fname+"&message="+message)
           e.preventDefault();
           $.ajax({
-            url: "https://getmyassignments.com/mail_api.php?email=piyushshukla720@gmail.com&name=Reshabh&message=abc",
+            url: urlString,
             success: function(e){
               alert("Sent")
             }
