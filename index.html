@@ -295,6 +295,9 @@
           $.ajax({
             url: urlString,
             success: function(e){
+              $("#name").val("")
+              $("#email").val("")
+              $("#message").val("")
               alert("Sent")
             }
           })
